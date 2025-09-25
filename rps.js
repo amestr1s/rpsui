@@ -18,6 +18,7 @@ function getString (choice) {
 
 const announcement = document.querySelector("#announcement");
 const scoreBoard = document.querySelector("#scoreboard");
+const boards = document.querySelector("#boards")
 
 let humanScore = 0;
 let computerScore = 0;
@@ -74,6 +75,7 @@ function playRound (humanChoice, computerChoice) {
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
         document.getElementById("scissors").disabled = true;
+        announcement.textContent = "";
     } else if (humanScore === 5) {
         const humanWin = document.createElement("div");
         humanWin.setAttribute("id", "final");
@@ -82,6 +84,7 @@ function playRound (humanChoice, computerChoice) {
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
         document.getElementById("scissors").disabled = true;
+        announcement.textContent = "";
     } else if (humanScore === 5 && computerScore === 5) {
         const humanComputerTie = document.createElement("div");
         humanComputerTie.setAttribute("id", "final");
@@ -90,6 +93,7 @@ function playRound (humanChoice, computerChoice) {
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
         document.getElementById("scissors").disabled = true;
+        announcement.textContent = "";
     } return;
 }
 
